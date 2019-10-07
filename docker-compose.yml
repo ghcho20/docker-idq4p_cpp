@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  idq4p:
+    build:
+      context: client
+      args:
+        timezone: ${TIMEZONE}
+    image: centos:idq4p
+    container_name: idq4p
+    privileged: true
+    volumes:
+      - "D:/docker/idq4pCpp/sample:/root/sample"
